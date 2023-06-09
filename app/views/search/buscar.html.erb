@@ -1,0 +1,18 @@
+<h1>Resultados de la búsqueda</h1>
+
+<% if @resultados.any? %>
+  <% @resultados.each do |resultado| %>
+    <p><%= resultado.description %></p>
+  <% end %>
+<% else %>
+  <p>No se encontraron resultados.</p>
+<% end %>
+<% if @resultados.any? %>
+  <% @resultados.each do |resultado| %>
+    <p><%= resultado.username %></p>
+  <% end %>
+<% else %>
+  <p>No se encontraron resultados.</p>
+<% end %>
+
+

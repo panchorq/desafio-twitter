@@ -1,0 +1,26 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Tweets</h1>
+
+<div id="tweets">
+  <% @tweets.each do |tweet| %>
+    <%= render tweet %>
+    <p>
+      <%= link_to "Show this tweet", tweet %>
+    </p>
+  <% end %>
+</div>
+
+<form action="/busqueda" method="get">
+  <input type="text" name="query" placeholder="Buscar...">
+  <input type="submit" value="Buscar">
+</form>
+<% @tweets.each do |tweet| %>
+<% end %>
+<%= paginate @tweets %>
+<button type="button" class="btn btn-primary">
+<%= link_to "Nuevo tweet", new_tweet_path, class: 'nav-link' %>
+</button>
+
+
+
